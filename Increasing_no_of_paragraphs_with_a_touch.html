@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let paragraphCount = 0;
+
+        function addParagraph() {
+            paragraphCount++;
+            const paragraph = document.createElement('p');
+            paragraph.innerText = `Paragraph ${paragraphCount}`;
+            document.getElementById('paragraphsContainer').appendChild(paragraph);
+        }
+    </script>
+    <button onclick="addParagraph()">Add Paragraph</button>
+    <div id="paragraphsContainer"></div>
+</body>
+</html>
