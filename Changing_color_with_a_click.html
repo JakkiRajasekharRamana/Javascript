@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function changeColor(color) {
+            const body = document.getElementsByTagName('body')[0];
+            switch (color) {
+                case 'red':
+                if (document.getElementById('redCheckbox').checked)
+                    body.style.backgroundColor = 'red';
+                else
+                    body.style.backgroundColor = '';
+                break;
+                case 'blue':
+                if (document.getElementById('blueCheckbox').checked)
+                    body.style.backgroundColor = 'blue';
+                else
+                    body.style.backgroundColor = '';
+                break;
+                case 'green':
+                if (document.getElementById('greenCheckbox').checked)
+                    body.style.backgroundColor = 'green';
+                else
+                    body.style.backgroundColor = '';
+                break;
+            }
+        }
+    </script>
+    <input type="checkbox" id="redCheckbox" onclick="changeColor('red')">Red<br><br>
+    <input type="checkbox" id="blueCheckbox" onclick="changeColor('blue')">Blue<br><br>
+    <input type="checkbox" id="greenCheckbox" onclick="changeColor('green')">Green<br><br>
+</body>
+</html>
